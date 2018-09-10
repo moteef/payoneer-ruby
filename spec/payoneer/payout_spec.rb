@@ -4,7 +4,6 @@ describe Payoneer::Payout do
   describe '.create' do
     let(:params) {
       {
-        program_id: '1234',
         payee_id: 'payee123',
         payment_id: 'payment1',
         amount: 5,
@@ -15,7 +14,6 @@ describe Payoneer::Payout do
 
     let(:payoneer_params) {
       {
-        p4: '1234',
         p5: 'payment1',
         p6: 'payee123',
         p7: '5.00',
