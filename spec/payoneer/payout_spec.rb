@@ -4,7 +4,6 @@ describe Payoneer::Payout do
   describe '.create' do
     let(:params) {
       {
-        program_id: '1234',
         payee_id: 'payee123',
         payment_id: 'payment1',
         amount: 5,
@@ -15,13 +14,12 @@ describe Payoneer::Payout do
 
     let(:payoneer_params) {
       {
-        p4: '1234',
         p5: 'payment1',
         p6: 'payee123',
         p7: '5.00',
         p8: 'a payout',
         p9: '04/30/2015 03:33:44',
-        Currency: 'USD',
+        Currency: Payoneer::DEFAULT_CURRENCY,
       }
     }
 
